@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\json",
+    "\\src\\assets\\script",
+    "\\src\\assets\\script\\post",
+    "\\src\\components",
+    "\\src\\router",
+    "\\src\\store",
+    "\\src\\views"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}
