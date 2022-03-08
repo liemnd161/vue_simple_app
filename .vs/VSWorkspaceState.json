@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\assets",
-    "\\src\\assets\\json",
     "\\src\\assets\\script",
     "\\src\\assets\\script\\post",
     "\\src\\components",
+    "\\src\\components\\layout",
     "\\src\\router",
     "\\src\\store",
     "\\src\\views"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\store\\index.ts",
   "PreviewInSolutionExplorer": false
 }

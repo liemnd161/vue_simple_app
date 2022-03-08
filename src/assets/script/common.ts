@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { IApiResponse } from '@/assets/script/type'
 import store from '@/store'
+import Vue from 'vue'
 
 export const commonFunct = {
   data: {
@@ -16,7 +17,12 @@ export const commonFunct = {
           status: response.status
         } as IApiResponse
       }).catch(error => {
-        store.dispatch('actionSetErrorStatus', true)
+        // store.dispatch('actionSetErrorStatus', true)
+        Vue.notify({
+          title: 'Error',
+          text: error.response.status + ' ' + error.response.statusText,
+          type: 'error'
+        })
         return {
           data: null,
           status: error.response.status

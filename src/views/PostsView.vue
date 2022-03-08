@@ -4,6 +4,11 @@
              :fields="postTable.fields"
              :items="postTable.items">
       <template #cell(actions)="row">
+        <b-form-checkbox :id="'cb' + row.item.id"
+                         :name="'cb' + row.item.id"
+                         v-model="row.item.isChecked"
+                         @input="isPostChecked(row.item)">
+        </b-form-checkbox>
         <b-button variant="primary" @click="goViewPostDetails(row.item.id)">Post {{row.item.id}}</b-button>
       </template>
     </b-table>
@@ -12,8 +17,9 @@
 
 <script lang="ts">
 import { postFunct } from '@/assets/script/post/post'
-import { ITableFields, IPosts, ITable, ISearchingTable } from '@/assets/script/type'
+import { ITableFields, IPosts, ITable, ISearchingTable, IPost } from '@/assets/script/type'
 import Vue from 'vue'
+import store from '@/store'
 
 export default Vue.extend({
   name: 'PostsView',
@@ -61,6 +67,9 @@ export default Vue.extend({
 
     goViewPostDetails (this: any, postId: string): void {
       this.$router.push(`/details/${postId}`)
+    },
+    isPostChecked (this: any, post: IPost): void {
+      postFunct.methods.isPostChecked(post)
     }
   }
 })

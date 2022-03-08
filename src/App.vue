@@ -5,6 +5,7 @@
       <router-link to="/posts">Posts</router-link>
     </nav>
     <router-view />
+    <notifications />
   </div>
 </template>
 
